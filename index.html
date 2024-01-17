@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/icons8-lock-50.png" type="image/x-icon">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="container" id="container">
+        <div class="box"></div>
+    </div>
+
+    <div class="form-container" id="register-container">
+
+        <form id="register-form" class="form-style">
+            <h2>Cadastrar</h2>
+            <label for="firstName">Nome:</label>
+            <input type="text" id="firstName" required placeholder="Seu primeiro nome">
+
+            <label for="lastName">Sobrenome:</label>
+            <input type="text" id="lastName" required placeholder="Seu ultimo nome">
+
+            <label for="phoneNumber">Número de Telefone:</label>
+            <input type="tel" id="phoneNumber" pattern="[0-9]{9,15}" required placeholder="Apenas números (9-15)">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required
+                placeholder="Seu melhor e-mail">
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" required placeholder="Senha">
+
+            <button type="button" onclick="register()">Cadastrar</button>
+            <p>Já tem uma conta? <a href="#" onclick="showLogin()">Faça login aqui</a></p>
+        </form>
+    </div>
+
+    <div class="form-container" id="login-container" style="display: none;">
+        <h2>Login</h2>
+        <form id="login-form" class="form-style">
+            <label for="loginId">E-mail ou Número de Telefone:</label>
+            <input type="text" id="loginId" required placeholder="Apenas números para telefone">
+
+            <label for="loginPassword">Senha:</label>
+            <input type="password" id="loginPassword" required placeholder="Sua senha">
+
+            <button type="button" onclick="login()">Login</button>
+        </form>
+        <p>Não tem uma conta? <a href="#" onclick="showRegister()">Cadastre-se aqui</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
